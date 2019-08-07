@@ -38,7 +38,8 @@ var appData = {
         return Math.abs(Number(howManyMadatoryExpenses));
     },
     chooseExpenses: function() {
-        for(let i = 0; i < appData.howManyMadatoryExpenses(); i++) {
+        let e = appData.howManyMadatoryExpenses();
+        for(let i = 0; i < e; i++) {
             let a = prompt("Enter a mandatory expense item for this month.", ""),
                 b = +prompt("How much it will cost?", "0");
         
@@ -99,7 +100,9 @@ var appData = {
     },
     chooseOptExpenses: function() {
 
-        for (let i = 0; i != appData.howManyOptEpenses(); i++) { 
+        let e = appData.howManyOptEpenses();
+
+        for (let i = 0; i != e; i++) { 
             let c = +prompt("How much a mandatory expense item will cost?", "0");
     
             while(isNaN(c) || c == "" || c == null) {
